@@ -36,14 +36,6 @@ fun Home(modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun Constructors(modifier: Modifier = Modifier) {
-    Text(
-        text = "Constructors page (WIP)",
-        modifier = modifier
-    )
-}
-
-@Composable
 fun Circuits(modifier: Modifier = Modifier) {
     Text(
         text = "Circuits page (WIP)",

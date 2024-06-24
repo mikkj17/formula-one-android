@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.formulaone.constructor.presentation.ConstructorListScreen
 import com.example.formulaone.driver.presentation.DriverListScreen
 import com.example.formulaone.navigation.domain.Circuits
 import com.example.formulaone.navigation.domain.Constructors
@@ -120,7 +121,7 @@ fun Navigation() {
                         DriverListScreen()
                     }
                     composable<Constructors> {
-                        Constructors()
+                        ConstructorListScreen()
                     }
                     composable<Circuits> {
                         Circuits()
