@@ -35,14 +35,6 @@ fun Home(modifier: Modifier = Modifier) {
     )
 }
 
-@Composable
-fun Circuits(modifier: Modifier = Modifier) {
-    Text(
-        text = "Circuits page (WIP)",
-        modifier = modifier
-    )
-}
-
 val screens = listOf(
     NavigationItem(
         "Home",

@@ -1,5 +1,6 @@
 package com.example.formulaone.core.data
 
+import com.example.formulaone.circuit.data.CircuitTableResponse
 import com.example.formulaone.constructor.data.ConstructorTableResponse
 import com.example.formulaone.driver.data.DriverTableResponse
 import retrofit2.http.GET
@@ -26,4 +27,15 @@ interface FormulaOneApi {
     suspend fun getConstructorsByYear(
         @Path("year") year: String,
     ): ApiResponse<ConstructorTableResponse>
+
+    @GET("circuits.json")
+    suspend fun getCircuits(
+        @Query("limit") limit: String,
+        @Query("offset") offset: String,
+    ): ApiResponse<CircuitTableResponse>
+
+    @GET("{year}/circuits.json")
+    suspend fun getCircuitsByYear(
+        @Path("year") year: String,
+    ): ApiResponse<CircuitTableResponse>
 }

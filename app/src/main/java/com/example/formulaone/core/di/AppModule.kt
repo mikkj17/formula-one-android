@@ -1,5 +1,6 @@
 package com.example.formulaone.core.di
 
+import com.example.formulaone.circuit.domain.CircuitRepository
 import com.example.formulaone.constructor.domain.ConstructorRepository
 import com.example.formulaone.core.data.FormulaOneApi
 import com.example.formulaone.core.util.Constants.BASE_URL
@@ -32,4 +33,8 @@ object AppModule {
     @Singleton
     @Provides
     fun provideConstructorRepository(api: FormulaOneApi) = ConstructorRepository(api)
+
+    @Singleton
+    @Provides
+    fun provideCircuitRepository(api: FormulaOneApi) = CircuitRepository(api)
 }
