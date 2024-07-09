@@ -19,7 +19,7 @@ class DriverRepository @Inject constructor(
             return Resource.Error("Could not fetch data...")
         }
 
-        return Resource.Success(response.MRData.DriverTable.Drivers)
+        return Resource.Success(response.data.driverTable.drivers)
     }
 
     suspend fun getAllDrivers() = getDrivers(1000, 0)
@@ -34,6 +34,6 @@ class DriverRepository @Inject constructor(
             return Resource.Error("Could not fetch data...")
         }
 
-        return Resource.Success(response.MRData.DriverTable.Drivers)
+        return Resource.Success(response.data.driverTable.drivers)
     }
 }

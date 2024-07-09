@@ -17,6 +17,6 @@ class ConstructorRepository @Inject constructor(
             return Resource.Error("Could not fetch data...")
         }
 
-        return Resource.Success(response.MRData.ConstructorTable.Constructors)
+        return Resource.Success(response.data.constructorTable.constructors)
     }
 }

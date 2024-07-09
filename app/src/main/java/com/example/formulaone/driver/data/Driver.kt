@@ -4,12 +4,12 @@ import com.example.formulaone.R
 
 data class Driver(
     val driverId: String,
-    val permanentNumber: Int,   // Todo: auto cast to int maybe
+    val permanentNumber: Int,
     val code: String,
-    val url: String,    // TODO: auto-parse to URI.
+    val url: String,
     val givenName: String,
     val familyName: String,
-    val dateOfBirth: String,    // TODO: auto-parse to date/datetime
+    val dateOfBirth: String,
     val nationality: String,
 ) {
     fun getImage(): Int = when (driverId) {

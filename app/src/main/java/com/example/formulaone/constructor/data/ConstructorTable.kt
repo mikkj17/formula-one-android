@@ -1,6 +1,8 @@
 package com.example.formulaone.constructor.data
 
+import com.google.gson.annotations.SerializedName
+
 data class ConstructorTable(
     val season: String,
-    val Constructors: List<Constructor>,
+    @SerializedName("Constructors") val constructors: List<Constructor>,
 )

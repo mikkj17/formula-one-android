@@ -1,6 +1,7 @@
 package com.example.formulaone.core.data
 
+import com.google.gson.annotations.SerializedName
+
 data class ApiResponse<T>(
-//    @JsonProperty("MRData")
-    val MRData: T
+    @SerializedName("MRData") val data: T
 )

@@ -1,6 +1,8 @@
 package com.example.formulaone.circuit.data
 
+import com.google.gson.annotations.SerializedName
+
 data class CircuitTable(
     val season: String,
-    val Circuits: List<Circuit>,
+    @SerializedName("Circuits") val circuits: List<Circuit>,
 )

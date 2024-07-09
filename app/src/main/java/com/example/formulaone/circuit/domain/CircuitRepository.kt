@@ -17,6 +17,6 @@ class CircuitRepository @Inject constructor(
             return Resource.Error("Could not fetch data...")
         }
 
-        return Resource.Success(response.MRData.CircuitTable.Circuits)
+        return Resource.Success(response.data.circuitTable.circuits)
     }
 }
