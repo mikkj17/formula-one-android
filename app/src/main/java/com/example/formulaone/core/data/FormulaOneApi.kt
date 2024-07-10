@@ -10,32 +10,32 @@ import retrofit2.http.Query
 interface FormulaOneApi {
     @GET("drivers.json")
     suspend fun getDrivers(
-        @Query("limit") limit: String,
-        @Query("offset") offset: String,
+        @Query("limit") limit: Int,
+        @Query("offset") offset: Int,
     ): ApiResponse<DriverTableResponse>
 
     @GET("{year}/drivers.json")
-    suspend fun getDriversByYear(@Path("year") year: String): ApiResponse<DriverTableResponse>
+    suspend fun getDriversByYear(@Path("year") year: Int): ApiResponse<DriverTableResponse>
 
     @GET("constructors.json")
     suspend fun getConstructors(
-        @Query("limit") limit: String,
-        @Query("offset") offset: String,
+        @Query("limit") limit: Int,
+        @Query("offset") offset: Int,
     ): ApiResponse<ConstructorTableResponse>
 
     @GET("{year}/constructors.json")
     suspend fun getConstructorsByYear(
-        @Path("year") year: String,
+        @Path("year") year: Int,
     ): ApiResponse<ConstructorTableResponse>
 
     @GET("circuits.json")
     suspend fun getCircuits(
-        @Query("limit") limit: String,
-        @Query("offset") offset: String,
+        @Query("limit") limit: Int,
+        @Query("offset") offset: Int,
     ): ApiResponse<CircuitTableResponse>
 
     @GET("{year}/circuits.json")
     suspend fun getCircuitsByYear(
-        @Path("year") year: String,
+        @Path("year") year: Int,
     ): ApiResponse<CircuitTableResponse>
 }

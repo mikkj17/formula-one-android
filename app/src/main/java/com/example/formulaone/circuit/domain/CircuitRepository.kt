@@ -12,9 +12,9 @@ class CircuitRepository @Inject constructor(
 ) {
     suspend fun getCircuitsByYear(year: Int): Resource<List<Circuit>> {
         val response = try {
-            api.getCircuitsByYear(year.toString())
+            api.getCircuitsByYear(year)
         } catch (e: Exception) {
-            return Resource.Error("Could not fetch data...")
+            return Resource.Error(e.message ?: "Could not fetch data...")
         }
 
         return Resource.Success(response.data.circuitTable.circuits)

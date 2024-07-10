@@ -14,9 +14,9 @@ class DriverRepository @Inject constructor(
 
     suspend fun getDriversByYear(year: Int): Resource<List<Driver>> {
         val response = try {
-            api.getDriversByYear(year.toString())
+            api.getDriversByYear(year)
         } catch (e: Exception) {
-            return Resource.Error("Could not fetch data...")
+            return Resource.Error(e.message ?: "Could not fetch data...")
         }
 
         return Resource.Success(response.data.driverTable.drivers)
@@ -29,7 +29,7 @@ class DriverRepository @Inject constructor(
         offset: Int
     ): Resource<List<Driver>> {
         val response = try {
-            api.getDrivers(limit = limit.toString(), offset = offset.toString())
+            api.getDrivers(limit = limit, offset = offset)
         } catch (e: Exception) {
             return Resource.Error("Could not fetch data...")
         }

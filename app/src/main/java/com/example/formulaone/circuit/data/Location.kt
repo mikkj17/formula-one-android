@@ -1,8 +1,8 @@
 package com.example.formulaone.circuit.data
 
 data class Location(
-    val lat: String,
-    val long: String,
+    val lat: Float,
+    val long: Float,
     val locality: String,
     val country: String,
 )

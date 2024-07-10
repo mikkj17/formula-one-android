@@ -1,6 +1,7 @@
 package com.example.formulaone.driver.data
 
 import com.example.formulaone.R
+import java.time.LocalDate
 
 data class Driver(
     val driverId: String,
@@ -12,6 +13,8 @@ data class Driver(
     val dateOfBirth: String,
     val nationality: String,
 ) {
+    fun getDateOfBirth() = LocalDate.parse(dateOfBirth)
+
     fun getImage(): Int = when (driverId) {
         "albon" -> R.drawable.albon
         "alonso" -> R.drawable.alonso

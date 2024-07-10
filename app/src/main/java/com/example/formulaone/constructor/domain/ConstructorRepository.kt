@@ -12,9 +12,9 @@ class ConstructorRepository @Inject constructor(
 ) {
     suspend fun getConstructorsByYear(year: Int): Resource<List<Constructor>> {
         val response = try {
-            api.getConstructorsByYear(year.toString())
+            api.getConstructorsByYear(year)
         } catch (e: Exception) {
-            return Resource.Error("Could not fetch data...")
+            return Resource.Error(e.message ?: "Could not fetch data...")
         }
 
         return Resource.Success(response.data.constructorTable.constructors)
