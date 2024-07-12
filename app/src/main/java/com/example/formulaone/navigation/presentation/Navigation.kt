@@ -32,6 +32,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.formulaone.circuit.presentation.CircuitListScreen
 import com.example.formulaone.constructor.presentation.ConstructorListScreen
 import com.example.formulaone.driver.presentation.DriverListScreen
+import com.example.formulaone.home.presentation.HomeScreen
 import com.example.formulaone.navigation.domain.Circuits
 import com.example.formulaone.navigation.domain.Constructors
 import com.example.formulaone.navigation.domain.Drivers
@@ -116,7 +117,7 @@ fun Navigation() {
                     startDestination = Home
                 ) {
                     composable<Home> {
-                        Home()
+                        HomeScreen()
                     }
                     composable<Drivers> {
                         DriverListScreen()

@@ -5,6 +5,7 @@ import com.example.formulaone.constructor.domain.ConstructorRepository
 import com.example.formulaone.core.data.FormulaOneApi
 import com.example.formulaone.core.util.Constants.BASE_URL
 import com.example.formulaone.driver.domain.DriverRepository
+import com.example.formulaone.result.domain.ResultRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -37,4 +38,8 @@ object AppModule {
     @Singleton
     @Provides
     fun provideCircuitRepository(api: FormulaOneApi) = CircuitRepository(api)
+
+    @Singleton
+    @Provides
+    fun provideResultRepository(api: FormulaOneApi) = ResultRepository(api)
 }

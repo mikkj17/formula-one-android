@@ -9,9 +9,6 @@ import androidx.compose.material.icons.outlined.Build
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material.icons.outlined.Place
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import com.example.formulaone.navigation.data.NavigationItem
 import kotlinx.serialization.Serializable
 
@@ -26,14 +23,6 @@ object Constructors
 
 @Serializable
 object Circuits
-
-@Composable
-fun Home(modifier: Modifier = Modifier) {
-    Text(
-        text = "You are home",
-        modifier = modifier
-    )
-}
 
 val screens = listOf(
     NavigationItem(
